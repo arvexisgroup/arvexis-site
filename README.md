@@ -1,52 +1,36 @@
-# ARVEXIS - Site Institucional
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Site institucional da ARVEXIS, empresa especializada em consultoria regulatória para áreas como alimentos, cosméticos, saneantes e dispositivos médicos.
+## Getting Started
 
----
+First, run the development server:
 
-## 🚀 Tecnologias utilizadas
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-O projeto será desenvolvido utilizando tecnologias modernas do mercado:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- **Next.js** (framework React)
-- **React.js**
-- **HTML5**
-- **CSS3**
-- **JavaScript (ES6+)**
-- **Tailwind CSS** (estilização)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
----
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## 🎯 Objetivo do projeto
+## Learn More
 
-Desenvolver um site profissional, moderno e responsivo para:
+To learn more about Next.js, take a look at the following resources:
 
-- Apresentar a empresa ARVEXIS
-- Exibir serviços regulatórios
-- Fortalecer a presença digital
-- Facilitar contato com clientes
-- Possibilitar expansão futura (multi-idioma)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
----
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## 📱 Funcionalidades previstas
+## Deploy on Vercel
 
-- Página institucional (Home)
-- Seção de serviços
-- Página "Quem somos"
-- Layout responsivo (mobile + desktop)
-- Integração com e-mail corporativo
-- Formulário de contato
-- Estrutura preparada para SEO
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
----
-
-## ⚙️ Status do projeto
-
-🚧 Em desenvolvimento
-
----
-
-## 👩‍💻 Desenvolvimento
-
-Projeto desenvolvido por **ARVEXIS Group**.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
