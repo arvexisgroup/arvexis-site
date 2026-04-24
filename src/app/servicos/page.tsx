@@ -193,50 +193,72 @@ export default function ServicosPage() {
       </section>
 
       {/* PORTFÓLIO */}
-      <section className="mx-auto max-w-7xl px-6 py-24 md:px-10">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#C6A86A]">
-            Portfólio de serviços
-          </p>
+   <section id="portfolio" className="bg-[#021e37] px-6 py-24 md:px-10">
+  <div className="mx-auto max-w-7xl">
 
-          <h2 className="mt-4 text-4xl font-semibold text-[#1E3A5F]">
-            Soluções regulatórias com excelência técnica
-          </h2>
+    {/* HEADER */}
+    <div className="mx-auto max-w-2xl text-center">
+      <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#C6A86A]">
+        Portfólio de serviços
+      </p>
 
-          <p className="mt-6 text-slate-500">
-            Estruturamos projetos regulatórios com profundidade técnica, clareza
-            documental e visão estratégica.
-          </p>
-        </div>
+      <h2 className="mt-4 text-4xl font-semibold text-white md:text-5xl">
+        Soluções regulatórias com excelência técnica
+      </h2>
 
-        <div className="mt-20 grid gap-10 lg:grid-cols-3">
-          {categorias.map((item, i) => (
-            <div
-              key={i}
-              className="group rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_10px_40px_rgba(2,30,55,0.05)] transition hover:-translate-y-2 hover:shadow-[0_25px_70px_rgba(2,30,55,0.10)]"
-            >
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">{item.emoji}</span>
-                <h3 className="text-xl font-semibold text-[#1E3A5F]">
-                  {item.titulo}
-                </h3>
-              </div>
+      <p className="mt-6 text-slate-300 leading-8">
+        Estruturamos projetos regulatórios com profundidade técnica, clareza
+        documental e visão estratégica.
+      </p>
+    </div>
 
-              <p className="mt-5 leading-7 text-slate-600">{item.descricao}</p>
+    {/* CARDS */}
+    <div className="mt-20 grid gap-10 lg:grid-cols-3">
 
-              <ul className="mt-6 space-y-3 text-slate-600">
-                {item.itens.map((sub, j) => (
-                  <li key={j} className="flex items-start gap-3">
-                    <span className="mt-1 text-[#C6A86A]">•</span>
-                    <span>{sub}</span>
-                  </li>
-                ))}
-              </ul>
+      {categorias.map((item, i) => (
+        <div
+          key={i}
+          className="group relative rounded-[28px] border border-white/10 bg-white/90 backdrop-blur-md p-8 shadow-[0_20px_60px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.35)]"
+        >
+
+          {/* GLOW SUAVE */}
+          <div className="absolute inset-0 rounded-[28px] bg-[radial-gradient(circle_at_top,rgba(198,168,106,0.12),transparent_70%)] opacity-60" />
+
+          <div className="relative z-10">
+
+            {/* HEADER */}
+            <div className="flex items-center gap-4">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#021e37] text-lg text-white shadow-md">
+                {item.emoji}
+              </span>
+
+              <h3 className="text-lg font-semibold text-[#c6a86a]">
+                {item.titulo}
+              </h3>
             </div>
-          ))}
-        </div>
-      </section>
 
+            {/* DESCRIÇÃO */}
+            <p className="mt-5 text-[15px] leading-7 text-slate-600">
+              {item.descricao}
+            </p>
+
+            {/* LISTA */}
+            <ul className="mt-6 space-y-3 text-[14.5px] text-slate-600">
+              {item.itens.map((sub, j) => (
+                <li key={j} className="flex items-start gap-3">
+                  <span className="mt-[6px] h-[6px] w-[6px] rounded-full bg-[#C6A86A]" />
+                  <span className="leading-relaxed">{sub}</span>
+                </li>
+              ))}
+            </ul>
+
+          </div>
+        </div>
+      ))}
+
+    </div>
+  </div>
+</section>
       {/* REGULARIZAÇÃO DE EMPRESAS */}
       <section className="bg-[#F3F7FA] py-24">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
