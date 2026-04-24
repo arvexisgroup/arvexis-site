@@ -1,5 +1,5 @@
 "use client"; // Necessário para o botão de abrir/fechar o menu funcionar
-
+import Image from "next/image";
 import "./globals.css";
 import Link from "next/link";
 import { useState } from "react";
@@ -21,8 +21,15 @@ export default function RootLayout({
             
             {/* LOGO */}
             <Link href="/" className="flex items-center gap-3">
+            <Image 
+                src="/lo2.png" // Nome do arquivo que você salvou na pasta public
+                alt="Logo Arvexis"
+                width={40}      // Ajuste o tamanho conforme achar melhor
+                height={40}
+                className="object-contain"
+              />
               <span className="text-white font-semibold text-xl tracking-widest">
-                ARVEXIS
+                ARVEXIS GROUP
               </span>
             </Link>
 

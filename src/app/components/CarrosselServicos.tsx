@@ -1,20 +1,25 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const imagens = [
   {
-    src: "/servico-lab-1.jpg",
-    alt: "Procedimento técnico em laboratório",
+    src: "/propaganda.jpg",
+    alt: "Conheça mais sobre nossos serviços",
+    botao: "Saber mais",
+    link: "#portfolio",
+    botaoClass:
+      "top-[60%] left-1/2 -translate-x-1/2 sm:top-[60%] md:top-[60%]",
   },
   {
-    src: "/servico-lab-2.jpg",
-    alt: "Equipe técnica em ambiente laboratorial",
-  },
-  {
-    src: "/servico-lab-3.jpg",
-    alt: "Manipulação de amostras em laboratório",
+    src: "/news.jpg",
+    alt: "Fique por dentro das notícias",
+    botao: "Ver notícias",
+    link: "/noticias",
+    botaoClass:
+      "top-[72%] left-[66%] -translate-x-1/2 max-sm:top-[72%] max-sm:left-[65%]",
   },
 ];
 
@@ -29,24 +34,38 @@ export default function CarrosselServicos() {
     return () => clearInterval(intervalo);
   }, []);
 
+  const imagemAtual = imagens[atual] ?? imagens[0];
+
   return (
     <div className="w-full">
-      <div className="relative overflow-hidden rounded-[28px] shadow-lg">
+      <div className="relative mx-auto overflow-hidden rounded-2xl bg-white shadow-lg sm:rounded-[28px]">
         <Image
-          src={imagens[atual].src}
-          alt={imagens[atual].alt}
-          width={1200}
-          height={800}
-          className="h-[420px] w-full object-cover"
+          src={imagemAtual.src}
+          alt={imagemAtual.alt}
+          width={1920}
+          height={1080}
+          className="h-auto w-full object-contain"
+          priority
         />
+
+        {imagemAtual.botao && imagemAtual.link && (
+          <Link
+            href={imagemAtual.link}
+            className={`absolute z-10 rounded-full bg-[#C6A86A] px-4 py-2 text-[10px] font-semibold text-[#021e37] shadow-[0_10px_40px_rgba(198,168,106,0.35)] transition hover:scale-105 sm:px-7 sm:py-3 sm:text-xs md:px-10 md:py-4 md:text-sm ${
+              imagemAtual.botaoClass
+            }`}
+          >
+            {imagemAtual.botao}
+          </Link>
+        )}
       </div>
 
-      <div className="mt-4 flex justify-center gap-2">
+      <div className="mt-3 flex justify-center gap-2 sm:mt-4">
         {imagens.map((_, index) => (
           <button
             key={index}
             onClick={() => setAtual(index)}
-            className={`h-3 w-3 rounded-full transition ${
+            className={`h-2.5 w-2.5 rounded-full transition sm:h-3 sm:w-3 ${
               atual === index ? "bg-[#C6A86A]" : "bg-slate-300"
             }`}
             aria-label={`Ir para imagem ${index + 1}`}

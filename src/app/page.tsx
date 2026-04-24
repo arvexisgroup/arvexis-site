@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import FormularioOrcamento from "./components/FormularioOrcamento";
 
 export default function SobrePage() {
   const whatsappLink =
@@ -7,7 +8,7 @@ export default function SobrePage() {
 
   return (
     <main className="min-h-screen bg-[#F4F4F4] text-[#444444]">
-      <section className="bg-[#061C33] text-white">
+      <section className="bg-[#0a2036] text-white">
         <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:py-24">
           <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div>
@@ -20,8 +21,9 @@ export default function SobrePage() {
               </h1>
 
               <p className="mt-8 max-w-3xl text-lg leading-8 text-slate-300">
-                A ARVEXIS é uma consultoria especializada em inteligência regulatória,
-                compliance sanitário e estruturação estratégica para empresas da área da saúde.
+                A ARVEXIS é uma consultoria especializada em inteligência
+                regulatória, compliance sanitário e estruturação estratégica para
+                empresas da área da saúde.
               </p>
 
               <div className="mt-8">
@@ -37,52 +39,51 @@ export default function SobrePage() {
             </div>
 
             <div className="flex justify-center lg:justify-end">
-  <div className="relative rounded-[28px] bg-gradient-to-br from-[#0A2746] to-[#061C33] p-[2px] shadow-2xl">
-    
-    {/* Efeito borda premium */}
-    <div className="rounded-[26px] bg-[#061C33]/80 backdrop-blur-md p-6">
+              <div className="relative z-10 flex items-center justify-center lg:justify-end">
+                <div className="group relative flex items-center justify-center">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(198,168,106,0.15),transparent_70%)] opacity-0 transition duration-300 group-hover:opacity-100" />
 
-      {/* Glow atrás */}
-      <div className="absolute inset-0 rounded-[28px] bg-[#C6A86A]/10 blur-2xl opacity-40" />
-
-      <Image
-        src="/logo-arvexis.jpeg"
-        alt="Logo Arvexis"
-        width={420}
-        height={420}
-        className="relative w-full max-w-[300px] rounded-[18px] object-contain"
-        priority
-      />
-    </div>
-  </div>
-</div>
+                  <Image
+                    src="/tagline.png"
+                    alt="Logo ARVEXIS®"
+                    width={320}
+                    height={320}
+                    className="relative z-10 h-auto w-[180px] object-contain transition-all duration-300 group-hover:scale-105 sm:w-[620px] md:w-[660px]"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* FORMULÁRIO MAIS EM CIMA */}
+      <FormularioOrcamento />
 
       <section className="bg-[#F4F4F4]">
         <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <h2 className="text-3xl font-semibold text-[#1E3A5F] md:text-5xl">
-                Quem somos
+                Áreas de atuação
               </h2>
 
               <p className="mt-6 text-lg leading-8">
-                Atuamos com foco em conformidade sanitária, segurança regulatória e
-                organização técnica de empresas que precisam operar com previsibilidade
-                e responsabilidade.
+                Atuamos com foco em conformidade sanitária, segurança regulatória
+                e organização técnica de empresas que precisam operar com
+                previsibilidade e responsabilidade.
               </p>
 
               <p className="mt-5 text-lg leading-8">
-                Nossa proposta é unir conhecimento técnico, estratégia regulatória e
-                visão preventiva, reduzindo riscos e fortalecendo a governança.
+                Nossa proposta é unir conhecimento técnico, estratégia regulatória
+                e visão preventiva, reduzindo riscos e fortalecendo a governança.
               </p>
             </div>
 
             <div className="overflow-hidden rounded-[32px] shadow-xl">
               <Image
-                src="/sobre-documentacao.jpg"
+                src="/imgregulatory.png"
                 alt="Profissional em ambiente técnico"
                 width={1200}
                 height={800}
@@ -105,7 +106,8 @@ export default function SobrePage() {
                 Excelência técnica
               </h3>
               <p className="mt-4 leading-7">
-                Atuação baseada em rigor técnico, atualização normativa e análise estratégica.
+                Atuação baseada em rigor técnico, atualização normativa e análise
+                estratégica.
               </p>
             </div>
 
@@ -114,7 +116,8 @@ export default function SobrePage() {
                 Visão preventiva
               </h3>
               <p className="mt-4 leading-7">
-                Antecipamos riscos regulatórios e estruturamos caminhos mais seguros.
+                Antecipamos riscos regulatórios e estruturamos caminhos mais
+                seguros.
               </p>
             </div>
 
@@ -123,7 +126,8 @@ export default function SobrePage() {
                 Estratégia aplicada
               </h3>
               <p className="mt-4 leading-7">
-                Transformamos exigências regulatórias em decisões práticas e sustentáveis.
+                Transformamos exigências regulatórias em decisões práticas e
+                sustentáveis.
               </p>
             </div>
           </div>
